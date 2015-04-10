@@ -29,7 +29,7 @@ class FileBackend(BaseBackend):
         cache_file = self.cache_dir + key
 
         with open(cache_file, 'w') as f:
-            f.write(cache_file)
+            f.write(content)
             f.flush()
 
     def get(self, key):

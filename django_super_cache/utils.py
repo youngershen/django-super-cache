@@ -48,6 +48,6 @@ def get_cache_key(request):
 def get_backend(cache_settings):
     backend = cache_settings.get('backend', None)
     if backend == 'file':
-        return FileBackend(settings)
+        return FileBackend(cache_settings)
 
     raise BackendNotFoundError(name=backend)
